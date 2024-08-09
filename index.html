@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenbea Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #top-up-box {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            max-width: 400px;
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .product {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tenbea Clone</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showTopUpBox()">Top Up</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Get Your Game Top-Up</h2>
+            <button onclick="showProducts()">View Products</button>
+        </section>
+        <section id="products" class="hidden">
+            <h2>Available Top-Ups</h2>
+            <div class="product">
+                <h3>Free Fire Diamonds</h3>
+                <p>Price: BDT 100</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>Clash of Clans Gems</h3>
+                <p>Price: BDT 550</p>
+                <button>Add to Cart</button>
+            </div>
+        </section>
+        <section id="top-up-box" class="hidden">
+            <h2>Enter Top Up Details</h2>
+            <form>
+                <label for="game-id">Game ID:</label>
+                <input type="text" id="game-id" placeholder="Enter your Game ID">
+                
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" placeholder="Enter amount">
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Tenbea Clone</p>
+    </footer>
+    <script>
+        function showProducts() {
+            document.getElementById('products').classList.toggle('hidden');
+        }
+
+        function showTopUpBox() {
+            document.getElementById('top-up-box').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
